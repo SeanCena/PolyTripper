@@ -51,9 +51,12 @@
   <select class="input" id='filter-input' type='text' style="visibility: hidden;" name='filter' placeholder='Try POLS 333-01, 14-301, or Library' autocomplete="off"></select>
   <div id='map'></div>
   <div id='p-container'>
-    <div id='plan'>
+    <div id='plan' class='inactive'>
         <div class="task__list">
-          <div class="task__head task--row">Itinerary</div>
+          <div class="task__head task--row">
+            <span style="margin-right: calc(100% - 90px);">Itinerary</span>
+            <img id = "hide_toggle" src="images/chevup.png" />
+          </div>
         </div>
     </div>
   </div>

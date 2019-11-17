@@ -1,9 +1,13 @@
-$('.task__add').on('focus',function(){
-  $(this).val('');
-});
-
-$('.task__add').on('blur',function(){
-  $(this).val('+ add new task');
+$('#hide_toggle').click(function(){
+  plan = $('#plan');
+  chevron = $('#hide_toggle');
+  if (plan.hasClass('inactive')){
+    plan.removeClass('inactive');
+    chevron.attr('src', '/images/chevdown.png');
+  }else{
+    plan.addClass('inactive');
+    chevron.attr('src', '/images/chevup.png');
+  }
 });
 
 
@@ -12,7 +16,6 @@ function push_checkList(item){
     var tasksN = $('.task').length + 1;
     var newTask = '<label for="task--' + tasksN + '" class="task task--new"><input class="task__check" type="checkbox" id="task--' + tasksN + '" /> <div class="task__field task--row">' + taskText + '<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div></label>'
     $('.task__list').append(newTask);
-    $('.task__add').val('');
     checkList();
 }
 
@@ -45,12 +48,12 @@ function checkList() {
 
         $field.addClass('delete');
         lastDeletedTask = $field.text();
-        console.log(lastDeletedTask);
         
         setTimeout(function(){
            $field.remove();
         }, 200);
 
+        //Removing items from itinerary is still very buggy.
         itinerary.splice(parseInt($field.val[0]) - 1);
         for(i = 0; i < itinerary.length; i++){
             itinerary[i] = (i + 1) + ". " + itinerary.splice(0)

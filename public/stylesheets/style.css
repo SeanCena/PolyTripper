@@ -119,11 +119,24 @@
       position: absolute;
       bottom: 0px;
       width: 300px;
+      max-width: calc(50% + 10px);
       height: calc(100% - 96px);
     }
 
     #plan{
+      position: absolute;
       height: calc(100% - 20px);
-      width: calc(100% - 20px); /*200px is the width of the check button thing*/
+      width: calc(100% - 20px);
       margin: 10px;
+    }
+
+    #plan.inactive{
+      top: calc(100% - 100px);
+    }
+
+    #hide_toggle{
+      position: relative;
+      right: 0px;
+      height: 10px;
+      cursor: pointer;
     }
