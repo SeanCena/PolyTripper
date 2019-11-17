@@ -1,0 +1,118 @@
+#plan {
+  border-radius:10px;
+  background-color:#f8f8f8;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.40);
+}
+
+@keyframes shake {
+  from {left: -2px;}
+  to   {left: 2px;}
+}
+
+@keyframes birth {
+  from {height:0;}
+  to   {height: 50px;}
+}
+
+.task--row {
+  height: 50px;
+  padding:0 20px;
+  line-height:50px;
+}
+
+.task__head {
+  background: #FE5F55;
+  color: white;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+}
+
+.task__footer {
+  transition: all 0.2s cubic-bezier(.7,.2,.17,1);
+  background: #1CCAD8;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+}
+
+.task__footer:hover {background-color:#54E0EA}
+
+.task {
+  overflow:hidden;
+  transition: all 0.2s 0.2s cubic-bezier(.7,.2,.17,1);
+  position:relative;
+  display:block;
+}
+
+.task__check {
+  position: absolute;
+  left: -9999px; 
+  z-index: -1;
+}
+
+.task__field {
+  transition: background-size 0.8s 0.2s cubic-bezier(.7,.2,.17,1),
+              background-color 0.2s cubic-bezier(.7,.2,.17,1),
+              height 0.2s 1s cubic-bezier(.7,.2,.17,1);
+  position:relative;
+  background-color:#f8f8f8;
+  border-top: 1px solid #eee;
+  background-image: linear-gradient(to right, #FE5F55, red);
+  background-size: 0 2px;
+  background-repeat:no-repeat;
+  background-position: left bottom;
+}
+
+.task__field:hover {background-color:white;}
+
+.task:first-child .task__field {
+  border-top:none;
+}
+
+.task--new:last-child {
+  animation: birth 0.3s cubic-bezier(.7,.2,.17,1) 1;
+}
+
+.task__field.shaking {
+  animation: shake 0.1s 0.1s infinite ease-in-out;
+  background-size: 100% 2px;
+}
+
+.task__check:checked + .task__field {
+  color: #47D185;
+}
+
+.task__important {
+  transition: all 0.3s cubic-bezier(.09,.66,.36,1.8);
+  opacity:0;
+  position: absolute;
+  right:0;
+  top:0;
+  transform: scale(0);
+  color: #47D185;
+  font-size:1.4em;
+  height:50px;
+  width:50px;
+  border:0;
+  background:none;
+}
+
+.task__check:checked + .task__field > .task__important {
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+.task__field.delete {
+  transition: all 0.2s cubic-bezier(.7,.2,.17,1);
+  transform: scale(1.5, 2);
+  height:0;
+  opacity:0;
+}
+
+.task__add {
+  height:50px;
+  border:0;
+  background:none;
+  width:100%;
+  color:white;
+}

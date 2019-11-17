@@ -1,0 +1,129 @@
+    #map {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .marker {
+      cursor: pointer;
+    }
+
+    .mapboxgl-popup-content {
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+    }
+
+    .mapboxgl-popup-tip {
+      border-top-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-help {
+      width: 100%;
+    }
+
+    .col-btn {
+      max-width: 100px !important;
+    }
+
+    .col {
+      padding: 0;
+      margin: 0;
+    }
+
+    .selectize-input::after {
+      visibility: hidden;
+    }
+
+    .selectize-input {
+      border: 0;
+      margin: 10px;
+      width: calc(100% - 20px);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.40);
+      padding: 15px;
+      height: 70px;
+    }
+    
+    .selectize-input .option .subname,.name {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .selectize-input .option {
+      width: calc(100vw - 110px);
+    }
+    
+    #filter-input-selectized {
+      top: 12px;
+      position: relative;
+    }
+    
+    .selectize-control.plugin-clear_button .clearAll {
+      top: 25px;
+      width: 40px;
+      padding-left: 17px;
+      text-align: center;
+      border-left: 1px solid lightslategray;
+    }
+
+    .selectize-dropdown {
+      border: 0;
+      margin: 0px 10px 0px 10px;
+      width: calc(100% - 20px);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.40);
+    }
+
+    .selectize-dropdown-content>.option {
+      padding: 5px 15px 5px 15px;
+    }
+    
+    .dropdown-empty-message {
+      padding: 5px 15px 10px 15px;
+      max-width: 100%;
+    }
+
+    /* Max Height Dropdown */
+    .selectize-dropdown,
+    .selectize-dropdown.form-control {
+      max-height: 30vh !important;
+    }
+
+    .selectize-dropdown-content {
+      max-height: 30vh !important;
+    }
+    
+    @media (min-width: 1025px) {
+  
+      .selectize-dropdown,
+      .selectize-dropdown.form-control {
+        max-height: calc(100vh - 200px) !important;
+      }
+  
+      .selectize-dropdown-content {
+        max-height: calc(100vh - 200px) !important;
+      }
+      
+    }
+
+    .animated {
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    #p-container{
+      position: absolute;
+      bottom: 0px;
+      width: 300px;
+      height: calc(100% - 96px);
+    }
+
+    #plan{
+      height: calc(100% - 20px);
+      width: calc(100% - 20px); /*200px is the width of the check button thing*/
+      margin: 10px;
+    }
