@@ -12,11 +12,11 @@ $('#hide_toggle').click(function(){
 
 
 function push_checkList(item){
-    var taskText = item; //$('.task__add').val();
-    var tasksN = $('.task').length + 1;
-    var newTask = '<label for="task--' + tasksN + '" class="task task--new"><input class="task__check" type="checkbox" id="task--' + tasksN + '" /> <div class="task__field task--row">' + taskText + '<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div></label>'
-    $('.task__list').append(newTask);
-    checkList();
+  var taskText = item; //$('.task__add').val();
+  var tasksN = $('.task').length + 1;
+  var newTask = '<label for="task--' + tasksN + '" class="task task--new"><input class="task__check" type="checkbox" id="task--' + tasksN + '" /> <div class="task__field task--row">' + taskText + '<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div></label>'
+  $('.task__list').append(newTask);
+  checkList();
 }
 
 

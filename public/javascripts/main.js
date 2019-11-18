@@ -209,7 +209,7 @@
         function displayFeatureMarker(feature) {
           var el = document.createElement('div');
           el.className = 'marker';
-          el.style.backgroundImage = 'url(/img/marker.png)';
+          el.style.backgroundImage = 'url(/images/marker.png)';
           el.style.height = "26px";
           el.style.width = "26px";
           //Add coords to coords list, building name to itinerary list
